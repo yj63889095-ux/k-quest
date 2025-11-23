@@ -19,6 +19,19 @@ export const metadata: Metadata = {
   title: "K-Quest | Premium Concierge",
   description: "Connect with verified locals for premium quests in Korea.",
   manifest: "/manifest.json",
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'none',
+      'max-snippet': -1,
+    },
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
