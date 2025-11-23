@@ -71,9 +71,9 @@ export default function PrivacyPage() {
                         <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">6. 개인정보 보호책임자</h2>
                         <p className="mb-2">회사는 회원의 개인정보를 보호하고 개인정보와 관련한 불만을 처리하기 위하여 아래와 같이 관련 부서 및 개인정보 보호책임자를 지정하고 있습니다.</p>
                         <div className="bg-[#262626] p-6 rounded-sm border border-[#333]">
-                            <p><strong>책임자:</strong> 정연주</p>
-                            <p><strong>직위:</strong> 대표 (CEO)</p>
-                            <p><strong>이메일:</strong> support@quest-k.com</p>
+                            <p><strong>책임자:</strong> Jeong Yeon-ju (정연주)</p>
+                            <p><strong>직위:</strong> CEO (대표)</p>
+                            <p><strong>이메일:</strong> wkrwkr777@gmail.com</p>
                         </div>
                     </section>
                 </div>

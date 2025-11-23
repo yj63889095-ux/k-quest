@@ -77,6 +77,16 @@ export default function TermsPage() {
                             본 약관에 명시되지 않은 사항은 관계 법령 및 상관례에 따릅니다.
                         </p>
                     </section>
+
+                    <section>
+                        <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">제7조 (문의처)</h2>
+                        <p>
+                            서비스 이용과 관련하여 문의사항이 있으신 경우 아래 연락처로 문의해 주시기 바랍니다.
+                        </p>
+                        <div className="mt-4 bg-[#262626] p-6 rounded-sm border border-[#333]">
+                            <p><strong>이메일:</strong> wkrwkr777@gmail.com</p>
+                        </div>
+                    </section>
                 </div>
 
                 <div className="mt-16 pt-8 border-t border-[#333] text-center">
