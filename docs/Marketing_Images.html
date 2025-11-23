@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Quest 마케팅 이미지</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f0f0f0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .card {
+            width: 1080px;
+            height: 1080px;
+            background: #1A1A1A;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #D4AF37, #FFD700, #D4AF37);
+        }
+
+        h1 {
+            color: #D4AF37;
+            font-size: 5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: white;
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 60px;
+        }
+
+        p {
+            color: #A0A0A0;
+            font-size: 2rem;
+            line-height: 1.6;
+            max-width: 800px;
+        }
+
+        .highlight {
+            color: #D4AF37;
+            font-weight: bold;
+        }
+
+        .emoji {
+            font-size: 8rem;
+            margin: 40px 0;
+        }
+
+        .logo {
+            position: absolute;
+            bottom: 60px;
+            font-size: 2rem;
+            color: #D4AF37;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 이미지 1: 서비스 소개 -->
+    <div class="card">
+        <div class="emoji">🌏🤝🇰🇷</div>
+        <h2>
+            외국인 여행자 + 한국인 전문가<br>
+            = 완벽한 한국 여행
+        </h2>
+        <p>
+            언어 장벽, 예약 어려움, 낯선 문화...<br>
+            현지인이 직접 해결해드립니다.
+        </p>
+        <div class="logo">K-QUEST</div>
+    </div>
+
+    <!-- 이미지 2: 신뢰 & 안전 -->
+    <div class="card">
+        <div class="emoji">🔒</div>
+        <h1>100% 안전 결제</h1>
+        <h2>
+            선입금 후 에스크로 보관<br>
+            작업 완료 시 자동 정산
+        </h2>
+        <p>
+            사기 걱정 NO, 직거래 NO<br>
+            <span class="highlight">K-Quest가 모든 거래를 보호합니다.</span>
+        </p>
+        <div class="logo">K-QUEST</div>
+    </div>
+
+    <!-- 이미지 3: 행동 유도 -->
+    <div class="card">
+        <h1 style="font-size: 6rem; margin-bottom: 20px;">지금 시작하세요</h1>
+        <h2 style="margin-bottom: 40px;">
+            맛집 예약? 통역? 길 안내?<br>
+            1000원부터 시작하는 한국 여행 도우미
+        </h2>
+        <p
+            style="font-size: 3rem; background: #D4AF37; color: #1A1A1A; padding: 30px 60px; border-radius: 10px; margin-top: 60px;">
+            quest-k.com
+        </p>
+        <div class="logo">K-QUEST</div>
+    </div>
+
+    <div style="color: #666; text-align: center; margin-top: 40px; font-size: 1rem;">
+        💡 <strong>사장님께:</strong> 각 이미지를 스크린샷으로 저장하신 후 인스타/블로그에 업로드하세요!<br>
+        (Windows: Win + Shift + S / Mac: Cmd + Shift + 4)
+    </div>
+
+</body>
+
+</html>
