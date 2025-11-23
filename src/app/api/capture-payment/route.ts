@@ -1,11 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase'
 
+export const dynamic = 'force-dynamic'; // Ensure this route is always treated as dynamic
+
 const PAYPAL_API_URL = process.env.PAYPAL_MODE === 'live'
     ? 'https://api-m.paypal.com'
     : 'https://api-m.sandbox.paypal.com'
 
 async function getPayPalAccessToken() {
+    // Build time check to avoid errors if env vars are missing during build
+    if (!process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID || !process.env.PAYPAL_SECRET) {
+        console.warn('PayPal credentials missing');
+        return null;
+    }
+
     const auth = Buffer.from(
         `${process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID}:${process.env.PAYPAL_SECRET}`
     ).toString('base64')
@@ -28,6 +36,12 @@ export async function POST(req: NextRequest) {
         const { orderId, questId } = await req.json()
 
         const accessToken = await getPayPalAccessToken()
+        if (!accessToken) {
+            return NextResponse.json(
+                { error: 'PayPal configuration error' },
+                { status: 500 }
+            )
+        }
 
         // PayPal Order 캡처 (실제 결제 완료)
         const captureResponse = await fetch(
