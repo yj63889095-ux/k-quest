@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Modern Luxury Palette */
+  --background: #1A1A1A;
+  /* Charcoal */
+  --foreground: #FFFFFF;
+
+  --primary: #D4AF37;
+  /* Rich Gold */
+  --primary-hover: #B5952F;
+
+  --secondary: #333333;
+  /* Dark Grey */
+  --secondary-hover: #4D4D4D;
+
+  --accent: #F5F5F5;
+  /* Soft White/Grey for text */
+
+  --border: #333333;
+  --input-bg: #262626;
+
+  --success: #28a745;
+  --warning: #D4AF37;
+  --error: #dc3545;
+}
+
+body {
+  color: var(--accent);
+  background: var(--background);
+  font-family: var(--font-montserrat), sans-serif;
+  line-height: 1.8;
+  /* Relaxed line height for luxury feel */
+  letter-spacing: 0.02em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-playfair), serif;
+  color: var(--primary);
+  letter-spacing: 0.05em;
+}
+
+/* Luxury Utilities */
+@layer utilities {
+  .text-gold {
+    color: var(--primary);
+  }
+
+  .bg-gold {
+    background-color: var(--primary);
+  }
+
+  .border-gold {
+    border-color: var(--primary);
+  }
+
+  /* Elegant Fade In Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+}
+
+/* Force white color for navigation links */
+a {
+  color: inherit !important;
+}
+
+a:visited {
+  color: inherit !important;
+}
+
+nav a {
+  color: white !important;
+}
+
+nav a:visited {
+  color: white !important;
+}

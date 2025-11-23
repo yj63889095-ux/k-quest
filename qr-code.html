@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Quest QR Code</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1A1A1A;
+            font-family: 'Georgia', serif;
+        }
+        .container {
+            text-align: center;
+            background: #262626;
+            padding: 60px;
+            border: 2px solid #D4AF37;
+            border-radius: 8px;
+        }
+        h1 {
+            color: #D4AF37;
+            font-size: 48px;
+            margin: 0 0 10px 0;
+            letter-spacing: 8px;
+        }
+        .subtitle {
+            color: #888;
+            font-size: 14px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        #qrcode {
+            display: inline-block;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+        }
+        .instruction {
+            margin-top: 30px;
+            color: #D4AF37;
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+        .url {
+            margin-top: 20px;
+            color: #999;
+            font-size: 14px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>K-QUEST</h1>
+        <p class="subtitle">Premium Concierge</p>
+        <div id="qrcode"></div>
+        <p class="instruction">📱 스캔하여 앱 설치</p>
+        <p class="url">http://192.168.219.101:3001</p>
+    </div>
+
+    <script>
+        // QR 코드 생성
+        new QRCode(document.getElementById("qrcode"), {
+            text: "http://192.168.219.101:3001",
+            width: 256,
+            height: 256,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+    </script>
+</body>
+</html>
