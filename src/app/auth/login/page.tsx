@@ -38,6 +38,12 @@ export default function LoginPage() {
     // 소셜 로그인 핸들러
     const handleSocialLogin = async (provider: 'google' | 'kakao') => {
         try {
+            // Supabase 객체 유효성 체크
+            if (!supabase || !supabase.auth) {
+                addToast('소셜 로그인이 아직 설정되지 않았습니다. 이메일로 로그인해주세요.', 'error')
+                return
+            }
+
             const { error } = await supabase.auth.signInWithOAuth({
                 provider: provider,
                 options: {
@@ -47,7 +53,7 @@ export default function LoginPage() {
             if (error) throw error
         } catch (error) {
             console.error('Social login error:', error)
-            addToast('Social login failed. Please try again.', 'error')
+            addToast('소셜 로그인 실패. 이메일로 로그인해주세요.', 'error')
         }
     }
 

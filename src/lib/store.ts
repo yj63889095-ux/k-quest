@@ -104,6 +104,11 @@ export const useStore = create<AppState>((set, get) => ({
         }
 
         try {
+            // Supabase 유효성 체크
+            if (!supabase || !supabase.auth) {
+                throw new Error('Database connection not configured. Please use demo accounts or contact support.');
+            }
+
             const { data, error } = await supabase.auth.signInWithPassword({
                 email,
                 password,
@@ -128,6 +133,11 @@ export const useStore = create<AppState>((set, get) => ({
 
     signup: async (email, password, role) => {
         try {
+            // Supabase 유효성 체크
+            if (!supabase || !supabase.auth) {
+                throw new Error('Database connection not configured. Please contact support.');
+            }
+
             const { data, error } = await supabase.auth.signUp({
                 email,
                 password,
