@@ -1,135 +1,130 @@
 "use client";
 
-import { Button } from "@/components/ui/Button";
-import { QuestCard } from "@/components/QuestCard";
-import Link from "next/link";
-import { ArrowRight, Star, Shield, Globe } from "lucide-react";
-import { useStore } from "@/lib/store";
+import { Construction } from "lucide-react";
 
-export default function Home() {
-  const { t } = useStore();
-
-  const latestQuests = [
-    {
-      id: "1",
-      title: "Exclusive Dining Reservation in Hongdae",
-      reward: "$50.00",
-      location: "Mapo-gu, Seoul",
-      time: "Concierge Service",
-      difficulty: "Medium" as const,
-      category: "Dining",
-    },
-    {
-      id: "2",
-      title: "Private Photo Session at Haeundae Beach",
-      reward: "$120.00",
-      location: "Haeundae, Busan",
-      time: "2 Hours",
-      difficulty: "Easy" as const,
-      category: "Photography",
-    },
-    {
-      id: "3",
-      title: "VIP Transport Guide: Gangnam to Incheon",
-      reward: "$80.00",
-      location: "Gangnam, Seoul",
-      time: "Transport",
-      difficulty: "Medium" as const,
-      category: "Transport",
-    },
-  ];
-
+export default function ComingSoon() {
   return (
-    <main className="min-h-screen bg-[#1A1A1A] text-white overflow-x-hidden">
-      {/* Hero Section - Full Screen Cinematic */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background with Overlay */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[#1A1A1A] z-10" />
-          {/* Placeholder for a high-end video or image */}
-          <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1538485399081-7191377e8241?q=80&w=2574&auto=format&fit=crop')] bg-cover bg-center animate-fade-in scale-105 transition-transform duration-[20s]" />
+    <main className="min-h-screen bg-gradient-to-br from-[#0A0A0A] via-[#1A1A1A] to-[#0A0A0A] text-white flex items-center justify-center px-4">
+      <div className="max-w-3xl w-full text-center space-y-12">
+        {/* Logo Animation */}
+        <div className="animate-fade-in">
+          <div className="inline-block p-8 rounded-full bg-gradient-to-br from-[#D4AF37]/20 to-[#D4AF37]/5 border border-[#D4AF37]/30 backdrop-blur-sm mb-8">
+            <Construction className="w-20 h-20 text-[#D4AF37] animate-pulse" />
+          </div>
         </div>
 
-        <div className="relative z-20 text-center px-6 max-w-5xl mx-auto w-full">
-          <p className="text-[#D4AF37] text-xs md:text-sm lg:text-base uppercase tracking-[0.3em] mb-4 md:mb-6 animate-fade-in delay-100">
-            {t.hero.subtitle}
-          </p>
-          <h1 className="text-4xl md:text-6xl lg:text-8xl font-serif text-white mb-6 md:mb-8 leading-tight animate-fade-in delay-200">
-            {t.hero.title}
+        {/* Main Heading */}
+        <div className="space-y-6 animate-fade-in delay-100">
+          <h1 className="text-5xl md:text-7xl font-serif font-bold mb-4 bg-gradient-to-r from-white via-[#D4AF37] to-white bg-clip-text text-transparent">
+            K-Quest
           </h1>
-          <p className="text-gray-300 text-base md:text-lg lg:text-xl font-light mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in delay-300 px-4">
-            {t.hero.description}
+          <p className="text-2xl md:text-3xl text-[#D4AF37] uppercase tracking-[0.3em] font-light">
+            서비스 준비중
           </p>
+          <p className="text-lg md:text-xl text-gray-400 font-light">
+            Coming Soon
+          </p>
+        </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 animate-fade-in delay-300 w-full md:w-auto">
-            <Link href="/quests" className="w-full md:w-auto">
-              <Button variant="primary" size="lg" className="w-full md:min-w-[200px]">
-                {t.hero.explore}
-              </Button>
-            </Link>
-            <Link href="/company" className="w-full md:w-auto">
-              <Button
-                variant="outline"
-                size="lg"
-                className="w-full md:min-w-[200px] hover:bg-white hover:text-black transition-colors"
-                style={{ color: 'white', borderColor: 'white', borderWidth: '1px' }}
-              >
-                {t.hero.philosophy}
-              </Button>
-            </Link>
+        {/* Description */}
+        <div className="max-w-2xl mx-auto space-y-4 text-gray-300 animate-fade-in delay-200">
+          <p className="text-base md:text-lg leading-relaxed">
+            프리미엄 한국 체험 플랫폼을 준비하고 있습니다.
+          </p>
+          <p className="text-sm md:text-base text-gray-500">
+            We are preparing a premium Korean experience platform.
+          </p>
+        </div>
+
+        {/* Divider */}
+        <div className="w-32 h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto animate-fade-in delay-300"></div>
+
+        {/* Business Info */}
+        <div className="bg-[#1A1A1A]/50 border border-[#333] backdrop-blur-sm rounded-2xl p-8 md:p-12 space-y-6 animate-fade-in delay-400">
+          <h2 className="text-xl md:text-2xl font-serif text-white mb-6">사업자 정보</h2>
+
+          <div className="space-y-4 text-sm md:text-base text-gray-400">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-2 pb-3 border-b border-[#333]">
+              <span className="text-gray-500">상호명</span>
+              <span className="text-white font-medium">K-Quest</span>
+            </div>
+
+            <div className="flex flex-col md:flex-row justify-between items-center gap-2 pb-3 border-b border-[#333]">
+              <span className="text-gray-500">대표자</span>
+              <span className="text-white font-medium">박세희</span>
+            </div>
+
+            <div className="flex flex-col md:flex-row justify-between items-center gap-2 pb-3 border-b border-[#333]">
+              <span className="text-gray-500">사업자등록번호</span>
+              <span className="text-white font-medium">발급 예정</span>
+            </div>
+
+            <div className="flex flex-col md:flex-row justify-between items-center gap-2 pb-3 border-b border-[#333]">
+              <span className="text-gray-500">통신판매업 신고번호</span>
+              <span className="text-white font-medium">신청 중</span>
+            </div>
+
+            <div className="flex flex-col md:flex-row justify-between items-center gap-2">
+              <span className="text-gray-500">이메일</span>
+              <span className="text-white font-medium">contact@quest-k.com</span>
+            </div>
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white/50 hidden md:block">
-          <div className="w-[1px] h-16 bg-gradient-to-b from-transparent via-[#D4AF37] to-transparent" />
+        {/* Footer Note */}
+        <div className="text-center text-gray-600 text-sm animate-fade-in delay-500">
+          <p>© 2025 K-Quest. All rights reserved.</p>
         </div>
-      </section>
+      </div>
 
-      {/* Philosophy Section */}
-      <section className="py-32 bg-[#1A1A1A] relative">
-        <div className="container mx-auto px-6 max-w-[1400px]">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-            <div className="p-8 border border-[#333] hover:border-[#D4AF37] transition-colors duration-500 group">
-              <Star className="w-10 h-10 text-[#D4AF37] mx-auto mb-6 group-hover:scale-110 transition-transform" />
-              <h3 className="text-xl font-serif mb-4 text-white">Premium Quality</h3>
-              <p className="text-gray-400 font-light">Curated tasks ensuring the highest standard of service and satisfaction.</p>
-            </div>
-            <div className="p-8 border border-[#333] hover:border-[#D4AF37] transition-colors duration-500 group">
-              <Shield className="w-10 h-10 text-[#D4AF37] mx-auto mb-6 group-hover:scale-110 transition-transform" />
-              <h3 className="text-xl font-serif mb-4 text-white">Secure & Private</h3>
-              <p className="text-gray-400 font-light">Your transactions and data are protected with enterprise-grade security.</p>
-            </div>
-            <div className="p-8 border border-[#333] hover:border-[#D4AF37] transition-colors duration-500 group">
-              <Globe className="w-10 h-10 text-[#D4AF37] mx-auto mb-6 group-hover:scale-110 transition-transform" />
-              <h3 className="text-xl font-serif mb-4 text-white">Global Access</h3>
-              <p className="text-gray-400 font-light">Seamlessly connect with Korea from anywhere in the world.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Background Decoration */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-[100px] animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-[100px] animate-pulse delay-1000"></div>
+      </div>
 
-      {/* Curated Collection (Latest Quests) */}
-      <section className="py-32 bg-[#111] border-t border-[#333]">
-        <div className="container mx-auto px-6 max-w-[1400px]">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16">
-            <div>
-              <p className="text-[#D4AF37] text-sm uppercase tracking-widest mb-2">{t.quest.subtitle}</p>
-              <h2 className="text-4xl md:text-5xl font-serif text-white">{t.quest.title}</h2>
-            </div>
-            <Link href="/quests" className="group flex items-center gap-2 text-white hover:text-[#D4AF37] transition-colors mt-6 md:mt-0">
-              <span className="uppercase tracking-widest text-sm">{t.common.viewDetails}</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
+      {/* Add CSS animations */}
+      <style jsx global>{`
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {latestQuests.map((quest) => (
-              <QuestCard key={quest.id} {...quest} />
-            ))}
-          </div>
-        </div>
-      </section>
+        .animate-fade-in {
+          animation: fade-in 0.8s ease-out forwards;
+          opacity: 0;
+        }
+
+        .delay-100 {
+          animation-delay: 0.1s;
+        }
+
+        .delay-200 {
+          animation-delay: 0.2s;
+        }
+
+        .delay-300 {
+          animation-delay: 0.3s;
+        }
+
+        .delay-400 {
+          animation-delay: 0.4s;
+        }
+
+        .delay-500 {
+          animation-delay: 0.5s;
+        }
+
+        .delay-1000 {
+          animation-delay: 1s;
+        }
+      `}</style>
     </main>
   );
 }
